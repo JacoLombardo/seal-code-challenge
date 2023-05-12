@@ -1,55 +1,47 @@
-import downloadFileAws from '@/pages/api/download-file';
-import getBucketListAws from '@/pages/api/list-bucket';
-import uploadFileAws from '@/pages/api/upload-file';
-import { createContext, ReactNode, useState } from 'react';
+import uploadFileAws from "@/pages/api/upload-file";
+import { createContext, ReactNode, useState } from "react";
 
 export type FileContextValue = {
-    file: any,
-    message: any,
-    storeFile: (e: any) => void,
-    uploadFile: () => void,
-    downloadFile: (item: any) => void,
-    getBucketList: () => void,
-}
+  files: File[];
+  message: string | null;
+  storeFile: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  uploadFile: () => void;
+};
 const initialFileContext: FileContextValue = {
-    file: null,
-    message: null,
-    storeFile: () => {},
-    uploadFile: () => {},
-    downloadFile: () => {},
-    getBucketList: () => {},
-}
-  
-  // ** Create Context
-  export const FileContext = createContext<FileContextValue>(initialFileContext);
-  
-  export const FileProvider = ({ children }: { children: ReactNode }) => {
-    const [file, setFile] = useState<any>(initialFileContext.file);
-    const [message, setMessage] = useState<String | null>(initialFileContext.message);
+  files: [],
+  message: null,
+  storeFile: () => {},
+  uploadFile: () => {},
+};
 
-    const storeFile = (e: any) => {
-        console.log(e.target.files[0]);
-        setFile(e.target.files[0]);
-    };
-    const uploadFile = async () => {
-        setMessage("Uploading...");
-        console.log(file)
-        console.log(message)
-        var returnData = await uploadFileAws(file);
-        setMessage(String(returnData));
-        setFile(null);
-    };
-    const downloadFile = async (item: any) => {
-        downloadFileAws(item);
-    };
-    const getBucketList = async () => {
-        const list = await getBucketListAws();
-        console.log("1")
-        return list;
-    };
-    return (
-      <FileContext.Provider value={{ file, message, storeFile, uploadFile, downloadFile, getBucketList }}>
-        {children}
-      </FileContext.Provider>
-    );
+// ** Create Context
+export const FileContext = createContext<FileContextValue>(initialFileContext);
+
+export const FileProvider = ({ children }: { children: ReactNode }) => {
+  const [files, setFiles] = useState<File[]>([]);
+  const [message, setMessage] = useState<string | null>(
+    initialFileContext.message
+  );
+
+  const storeFile = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      for (let i = 0; i < e.target.files.length; i++) {
+        files.push(e.target.files[i]);
+      }
+    }
   };
+  const uploadFile = async () => {
+    var returnData: string = await uploadFileAws(files);
+    setMessage(returnData);
+    setFiles([]);
+    setTimeout(() => {
+      setMessage(null);
+    }, 3000);
+  };
+
+  return (
+    <FileContext.Provider value={{ files, message, storeFile, uploadFile }}>
+      {children}
+    </FileContext.Provider>
+  );
+};

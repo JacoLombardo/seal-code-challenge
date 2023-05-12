@@ -1,0 +1,65 @@
+.cardContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.card {
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.date {
+  font-size: 10px;
+  font-style: oblique;
+  margin-top: 10px;
+}
+
+.downloadIcon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: 2px solid black;
+  border-radius: 30px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.shareIcon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border: 2px solid black;
+  border-radius: 30px 10px 10px 30px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.copyIcon {
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+.title {
+  margin: 20px;
+  text-align: center;
+}
+
+.inputContainer {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+}
+
+.modal {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.link {
+  overflow-wrap: break-word;
+}
