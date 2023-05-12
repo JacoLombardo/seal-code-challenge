@@ -9,8 +9,6 @@ export interface Params {
   Bucket: string | undefined;
   Key: File | string;
   Expires: number;
-  Body?: File;
-  ContentType?: string;
 }
 
 export const credentials: Credentials = {

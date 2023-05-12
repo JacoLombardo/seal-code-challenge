@@ -1,4 +1,4 @@
-import { Params, credentials } from "@/utils/s3";
+import { credentials } from "@/utils/s3";
 import { AWSError } from "aws-sdk";
 import S3 from "aws-sdk/clients/s3";
 import { PromiseResult } from "aws-sdk/lib/request";

@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useContext, useRef, useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import styles from "@/styles/cards.module.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
