@@ -41,7 +41,6 @@ export default function Item({
       const url: string = res.url;
       setDate(moment(object.LastModified).format("MMMM Do YYYY, h:mm:ss a"));
       if (object.ContentType?.includes("image")) {
-        // setIcon("/icons/image.png");
         setIcon(url);
       } else if (object.ContentType?.includes("pdf")) {
         setIcon("/icons/pdf.png");
@@ -83,7 +82,23 @@ export default function Item({
   return (
     <>
       <Card style={{ width: "9rem" }} className={styles.card}>
-        <Card.Img variant="top" src={icon} alt={file} title={file} />
+        <div
+          style={{
+            position: "relative",
+          }}
+        >
+          <Card.Img variant="top" src={icon} alt={file} title={file} />
+          {icon.includes("https") && (
+            <Image
+              src="/icons/image.png"
+              alt="image"
+              title="image"
+              width={25}
+              height={25}
+              className={styles.imageIcon}
+            />
+          )}
+        </div>
         <div>
           <p className={styles.date}>{date}</p>
           <Card.Title>{file}</Card.Title>

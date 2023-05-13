@@ -53,6 +53,12 @@
   cursor: pointer;
 }
 
+.imageIcon {
+  position: absolute;
+  bottom: -2px;
+  left: 0px;
+}
+
 .title {
   margin: 20px;
   text-align: center;
