@@ -21,10 +21,10 @@
 
 <h2>Technology used</h2>
   <div style="display: flex, flex-direction: row">
-    <img src="https://iconduck.com/icons/11295/next-js?shared" style="width: 40px" />
-    <img src="https://cdn-icons-png.flaticon.com/512/919/919851.png" style="width: 40px"/>
-    <img src="https://img.icons8.com/color/256/mongodb.png" style="width: 40px"/>
-    <img src="https://img.icons8.com/fluency/256/node-js.png" style="width: 40px"/>
+    <img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3220588/nextjs-icon-md.png" style="width: 40px" />
+    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" style="width: 40px"/>
+    <img src="https://static-00.iconduck.com/assets.00/aws-icon-512x512-hniukvcn.png" style="width: 40px"/>
+    <img src="https://cdn.iconscout.com/icon/free/png-256/free-amazon-s3-2968702-2464706.png" style="width: 40px"/>
     <img src="https://img.icons8.com/color/256/java-web-token.png" style="width: 40px"/>
     <img src="https://pics.freeicons.io/uploads/icons/png/2182976911536207307-512.png" style="width: 40px"/>
     <img src="https://img.icons8.com/color/256/css3.png" style="width: 40px"/>
