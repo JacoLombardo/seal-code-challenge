@@ -5,7 +5,7 @@
 <h2>Composition</h2>
   <p>The site is composed of:</p>
   <li>Upload, landing page to upload files;</li>
-  <li>List, content page with all the files of the bucket.</li>
+  <li>List, content page with all the files of the bucket.</li><br/>
   
   <p>I could have implemented an app with only one view but I wanted to show the difference between a page implemented with CSR (Client-side Rendering) and one with the interesting Next.js feature of SSR (Server-side Rendering), ideal in this case to keep the data always updated since the page in generated on each request.</p>
     
