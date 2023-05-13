@@ -6,6 +6,8 @@
   <p>The site is composed of:</p>
   <li>Upload, landing page to upload files;</li>
   <li>List, content page with all the files of the bucket.</li>
+  
+  <p>I could have implemented an app with only one view but I wanted to show the difference between a page implemented with CSR (Client-side Rendering) and one with the interesting Next.js feature of SSR (Server-side Rendering), ideal in this case to keep the data always updated since the page in generated on each request.</p>
     
   <h2>Features</h2>
   <p>The user is able to upload one or multiple files of type:</p>
@@ -13,7 +15,7 @@
   <li>Excel,</li>
   <li>Word,</li>
   <li>txt,</li>
-  <li>images.</li>
+  <li>images.</li><br/>
   <p>The user is able to display a list of all the uploaded files, with different icons depending on the file type, and if they are images, also a preview.</p>
   <p>The user is able to download one or multiple files.</p>
   <p>The user is able to create a download link with expiration time (three options of expiration time) to share publicly.</p>
