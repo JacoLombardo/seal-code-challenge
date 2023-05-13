@@ -25,7 +25,6 @@
     <img src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" style="width: 40px"/>
     <img src="https://static-00.iconduck.com/assets.00/aws-icon-512x512-hniukvcn.png" style="width: 40px"/>
     <img src="https://cdn.iconscout.com/icon/free/png-256/free-amazon-s3-2968702-2464706.png" style="width: 40px"/>
-    <img src="https://img.icons8.com/color/256/java-web-token.png" style="width: 40px"/>
-    <img src="https://pics.freeicons.io/uploads/icons/png/2182976911536207307-512.png" style="width: 40px"/>
-    <img src="https://img.icons8.com/color/256/css3.png" style="width: 40px"/>
+    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" style="width: 40px"/>
+    <img src="https://static-00.iconduck.com/assets.00/moment-js-icon-1024x1024-44e1nhfw.png" style="width: 40px"/>
   </div>
