@@ -84,7 +84,6 @@ export default function Input({ show, setShow, file }: Props) {
           </Button>
         </Modal.Footer>
       </Modal>
-      ;
     </>
   );
 }

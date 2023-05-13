@@ -25,7 +25,7 @@ export const FileProvider = ({ children }: { children: ReactNode }) => {
 
   const storeFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      for (let i = 0; i < e.target.files.length; i++) {
+      for (let i: number = 0; i < e.target.files.length; i++) {
         files.push(e.target.files[i]);
       }
     }

@@ -5,7 +5,7 @@ export default async function createDownloadLinkAws(
   file: string,
   time: number
 ) {
-  const s3 = new S3(credentials);
+  const s3: S3 = new S3(credentials);
 
   const params: Params = {
     Bucket: process.env.NEXT_PUBLIC_BUCKET_NAME,

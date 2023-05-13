@@ -6,13 +6,35 @@ import styles from "@/styles/cards.module.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { useState } from "react";
+import { Button } from "react-bootstrap";
+
+export interface downloadObject {
+  url: string;
+  name: string;
+}
 
 export default function List({ stringList }: { stringList: string }) {
   const list: Object[] = JSON.parse(stringList);
+  const [selected, setSelected] = useState<downloadObject[]>([]);
+  const [showSelect, setShowSelect] = useState<boolean>(false);
+
+  const downloadFiles = () => {
+    for (let i: number = 0; i < selected.length; i++) {
+      const a: HTMLAnchorElement = document.createElement("a");
+      a.href = selected[i].url;
+      a.download = selected[i].name;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+  };
 
   return (
     <>
       <Head>
+        <title>SEAL App</title>
+        <meta name="SEAL App" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Navbar bg="dark" variant="dark">
@@ -25,11 +47,46 @@ export default function List({ stringList }: { stringList: string }) {
           </Nav>
         </Container>
       </Navbar>
+      <div className={styles.buttonsContainer}>
+        {showSelect && (
+          <Button variant="secondary" onClick={downloadFiles}>
+            Download
+          </Button>
+        )}
+        {showSelect ? (
+          <Button
+            variant="secondary"
+            onClick={() => {
+              setShowSelect((prevCheck) => !prevCheck);
+            }}
+          >
+            Cancel
+          </Button>
+        ) : (
+          <Button
+            variant="secondary"
+            onClick={() => {
+              setShowSelect((prevCheck) => !prevCheck);
+            }}
+          >
+            Select files
+          </Button>
+        )}
+      </div>
       <h1 className={styles.title}>List of files</h1>
+
       <div className={styles.cardContainer}>
         {list &&
           list.map((item: any, index: any) => {
-            return <Item key={index} file={item} />;
+            return (
+              <Item
+                key={index}
+                file={item.Key}
+                showSelect={showSelect}
+                selected={selected}
+                setSelected={setSelected}
+              />
+            );
           })}
       </div>
     </>
