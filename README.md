@@ -7,7 +7,8 @@
   <li>Upload, landing page to upload files;</li>
   <li>List, content page with all the files of the bucket.</li><br/>
   
-  <p>I could have implemented an app with only one view but I wanted to show the difference between a page implemented with CSR (Client-side Rendering) and one with the interesting Next.js feature of SSR (Server-side Rendering), ideal in this case to keep the data always updated since the page in generated on each request.</p>
+  <p>I could have implemented an app with only one view but I wanted to show the difference between a page implemented with CSR (Client-side Rendering) and one with the interesting Next.js feature of SSR (Server-side Rendering), ideal in this case to keep the data always updated since the page in generated in the server on each request.</p>
+  <p>I decided to go for a basic design with the help of Bootstrap components since it seems to me that the real focus of this challenge was the backend part.</p>
     
   <h2>Features</h2>
   <p>The user is able to upload one or multiple files of type:</p>
