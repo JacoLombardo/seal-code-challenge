@@ -20,6 +20,8 @@
   <p>The user is able to display a list of all the uploaded files, with different icons depending on the file type, and if they are images, also a preview.</p>
   <p>The user is able to download one or multiple files.</p>
   <p>The user is able to create a download link with expiration time (three options of expiration time) to share publicly.</p>
+  
+  <p>It could be useful to implement a registration/login feature to protect the files and add specific files to favourites. Also to divide the list into categories.</p>
  
 
 <h2>Technology used</h2>
